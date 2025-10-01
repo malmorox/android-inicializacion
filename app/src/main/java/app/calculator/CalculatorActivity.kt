@@ -18,32 +18,36 @@ class CalculatorActivity : AppCompatActivity() {
         setContentView(R.layout.activity_calculator)
 
         var cajaOperacion = findViewById<TextView>(R.id.operacion)
-        cajaOperacion.text = "0"
         var cajaResultado = findViewById<TextView>(R.id.resultado)
+        cajaResultado.text = "0"
         var numero1: String = ""
         var numero2: String = ""
         var operador: String = ""
         var resultado: String = ""
+        var ultimaOperacion: String = ""
         var hayOperador: Boolean = false
+        var modoError: Boolean = false
 
         fun listenerNumeros(num: String) {
+            if (modoError) return
             if (!hayOperador) {
                 numero1 += num
                 cajaOperacion.text = numero1
             } else {
                 numero2 += num
-                cajaOperacion.text = "$numero1 $operador $numero2"
+                cajaResultado.text = "$numero1 $operador $numero2"
             }
         }
 
         fun listenerOperadores(op: String) {
+            if (modoError) return
             if (!hayOperador) {
                 if (numero1.isEmpty()) {
                     numero1 = "0"
                 }
                 hayOperador = true
                 operador = op
-                cajaOperacion.text = "$numero1 $operador"
+                cajaResultado.text = "$numero1 $operador"
             }
         }
 
@@ -81,20 +85,21 @@ class CalculatorActivity : AppCompatActivity() {
         btnDiv.setOnClickListener { listenerOperadores("÷") }
 
         btnPunto.setOnClickListener {
+            if (modoError) return@setOnClickListener
             if (!hayOperador && !numero1.contains(".")) {
                 if (numero1.isEmpty()) {
                     numero1 = "0."
                 } else {
                     numero1 += "."
                 }
-                cajaOperacion.text = numero1
+                cajaResultado.text = numero1
             } else if (hayOperador && !numero2.contains(".")) {
                 if (numero2.isEmpty()) {
                     numero2 = "0."
                 } else {
                     numero2 += "."
                 }
-                cajaOperacion.text = "$numero1 $operador $numero2"
+                cajaResultado.text = "$numero1 $operador $numero2"
             }
         }
 
@@ -103,8 +108,9 @@ class CalculatorActivity : AppCompatActivity() {
             numero2 = ""
             operador = ""
             hayOperador = false
-            cajaOperacion.text = "0"
-            cajaResultado.text = ""
+            modoError = false
+            cajaOperacion.text = ""
+            cajaResultado.text = "0"
         }
 
         btnIgual.setOnClickListener {
@@ -119,12 +125,16 @@ class CalculatorActivity : AppCompatActivity() {
                         if (num2 != 0.0) {
                             dividir(num1, num2)
                         } else {
+                            modoError = true
                             "Error"
                         }
                     }
-                    else -> "Error"
+                    else -> {
+                        modoError = true
+                        "Error"
+                    }
                 }
-                val resultado = when (res) {
+                resultado = when (res) {
                     is String -> res
                     is Double -> if (res % 1.0 == 0.0) res.toInt().toString() else res.toString()
                     is Float -> if (res % 1f == 0f) res.toInt().toString() else res.toString()
@@ -132,10 +142,14 @@ class CalculatorActivity : AppCompatActivity() {
                     else -> res.toString()
                 }
                 cajaResultado.text = resultado
-                numero1 = resultado
-                numero2 = ""
-                operador = ""
-                hayOperador = false
+                if (resultado != "Error") {
+                    numero1 = "0"
+                    numero1 = resultado
+                    numero2 = ""
+                    operador = ""
+                    hayOperador = false
+                    modoError = false
+                }
             }
         }
     }
