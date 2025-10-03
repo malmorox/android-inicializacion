@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="OperacionesCalculadora">
+        <item name="android:textColor">#C3C3C3</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">end</item>
+
+    </style>
+    <style name="ResultadoCalculadora">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">62sp</item>
+        <item name="android:gravity">end</item>
+    </style>
+    <style name="BotonCalculadora">
+        <item name="android:backgroundTint">#333333</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+</resources>

@@ -31,8 +31,9 @@ class CalculatorActivity : AppCompatActivity() {
         fun listenerNumeros(num: String) {
             if (modoError) return
             if (!hayOperador) {
+                cajaResultado.text = ""
                 numero1 += num
-                cajaOperacion.text = numero1
+                cajaResultado.text = numero1
             } else {
                 numero2 += num
                 cajaResultado.text = "$numero1 $operador $numero2"
@@ -104,13 +105,14 @@ class CalculatorActivity : AppCompatActivity() {
         }
 
         btnBorrar.setOnClickListener {
-            numero1 = "0"
+            numero1 = ""
             numero2 = ""
             operador = ""
             hayOperador = false
             modoError = false
             cajaOperacion.text = ""
             cajaResultado.text = "0"
+            ultimaOperacion = ""
         }
 
         btnIgual.setOnClickListener {
@@ -141,6 +143,8 @@ class CalculatorActivity : AppCompatActivity() {
                     is Int -> res.toString()
                     else -> res.toString()
                 }
+                ultimaOperacion = "$numero1 $operador $numero2"
+                cajaOperacion.text = ultimaOperacion
                 cajaResultado.text = resultado
                 if (resultado != "Error") {
                     numero1 = "0"
@@ -149,6 +153,7 @@ class CalculatorActivity : AppCompatActivity() {
                     operador = ""
                     hayOperador = false
                     modoError = false
+                    ultimaOperacion = ""
                 }
             }
         }

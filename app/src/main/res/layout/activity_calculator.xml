@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.calculator.CalculatorActivity">
+    tools:context="app.calculator.CalculatorActivity"
+    android:background="#1E1E1E" >
 
     <LinearLayout
         android:id="@+id/cajaNumeros"
@@ -19,18 +20,16 @@
         <TextView
             android:id="@+id/operacion"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:textSize="16sp"
-            android:gravity="end"
+            android:layout_height="45dp"
             app:layout_constraintTop_toBottomOf="@id/resultado"
+            style="@style/OperacionesCalculadora"
              />
 
         <TextView
             android:id="@+id/resultado"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:textSize="24sp"
-            android:gravity="end"
+            android:layout_height="75dp"
+            style="@style/ResultadoCalculadora"
              />
     </LinearLayout>
 
@@ -47,70 +46,86 @@
         <TableRow>
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/boton1"
-                android:text="1" />
+                android:text="1"
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/boton2"
-                android:text="2" />
+                android:text="2"
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/boton3"
-                android:text="3" />
+                android:text="3"
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/botonSuma"
-                android:text="+" />
+                android:text="+"
+                style="@style/BotonCalculadora" />
         </TableRow>
         <TableRow>
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/boton4"
-                android:text="4" />
+                android:text="4"
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/boton5"
-                android:text="5" />
+                android:text="5"
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/boton6"
-                android:text="6" />
+                android:text="6"
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/botonResta"
-                android:text="-" />
+                android:text="-"
+                style="@style/BotonCalculadora" />
         </TableRow>
         <TableRow>
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/boton7"
-                android:text="7" />
+                android:text="7"
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/boton8"
-                android:text="8" />
+                android:text="8"
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/boton9"
-                android:text="9" />
+                android:text="9"
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/botonMultiplicacion"
-                android:text="×" />
+                android:text="×"
+                style="@style/BotonCalculadora" />
         </TableRow>
         <TableRow>
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/botonBorrar"
-                android:text="C" />
+                android:text="C"
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/boton0"
-                android:text="0" />
+                android:text="0"
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/botonPunto"
-                android:text="," />
+                android:text=","
+                style="@style/BotonCalculadora" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/botonDivision"
-                android:text="÷" />
+                android:text="÷"
+                style="@style/BotonCalculadora" />
         </TableRow>
         <TableRow>
             <View
@@ -125,7 +140,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/botonIgual"
                 android:text="="
-                android:layout_span="2" />
+                android:layout_span="2"
+                style="@style/BotonCalculadora" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
