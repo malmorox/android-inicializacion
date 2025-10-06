@@ -12,10 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Primeraapp">
         <activity
-            android:name="app.controller.ControladorPrincipalActivity"
-            android:exported="false" />
-        <activity
-            android:name="app.calculator.CalculatorActivity"
+            android:name="app.comida.ComidaActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +21,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="app.calculator.CalculatorActivity"
             android:exported="true">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
         </activity>
     </application>
 
