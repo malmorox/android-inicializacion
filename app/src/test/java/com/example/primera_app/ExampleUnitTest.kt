@@ -1,4 +1,4 @@
-package com.example.primera_app
+package com.example.android_inicializacion
 
 import org.junit.Test
 
