@@ -82,20 +82,92 @@
 
     </LinearLayout>
 
-    <SeekBar
-        android:id="@+id/seekBarComida"
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="100"
-        android:progress="50"
-        android:layout_marginTop="16dp" />
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PESO"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="kg"
+            android:textAlignment="center" />
+
+        <SeekBar
+            android:id="@+id/seekBarComida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRestarEdad"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/comidas_animales_button"
+                android:text="-" />
+            
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSumarEdad"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/comidas_animales_button"
+                android:text="+" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="PESO DE LA COMIDA"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
     </LinearLayout>
 
 </LinearLayout>
