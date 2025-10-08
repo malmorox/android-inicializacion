@@ -6,6 +6,7 @@
     <color name="comidas_animales_background">#0C3843</color>
     <color name="comidas_animales_text">#8EC0E6</color>
     <color name="comidas_animales_cardview">#10617E</color>
+    <color name="comidas_animales_containers">#2A7C99</color>
     <color name="comidas_animales_cardview_selected">#3A94B1</color>
     <color name="comidas_animales_button">#2CB4FF</color>
     <color name="comidas_animales_icon">#B6DAF8</color>
