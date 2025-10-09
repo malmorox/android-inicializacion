@@ -18,6 +18,7 @@
         android:weightSum="2">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/perro"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -53,6 +54,7 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/gato"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
