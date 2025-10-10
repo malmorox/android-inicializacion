@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Inicialización a Android</string>
-    
+
     <!-- Aplicacion comida de animales -->
     <string name="dog">Perro</string>
     <string name="cat">Gato</string>
