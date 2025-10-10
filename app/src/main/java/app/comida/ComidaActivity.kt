@@ -5,8 +5,6 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.android_inicializacion.R
 
 class ComidaActivity : AppCompatActivity() {
@@ -18,6 +16,8 @@ class ComidaActivity : AppCompatActivity() {
     lateinit var btnSumarEdad: androidx.appcompat.widget.AppCompatButton
     lateinit var btnRestarEdad: androidx.appcompat.widget.AppCompatButton
     lateinit var edadValor: TextView
+    var edad: Int = 0
+    var peso: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +49,8 @@ class ComidaActivity : AppCompatActivity() {
         slidePeso.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 pesoValor.text = "$progress kg"
+                peso = progress
+                actualizarPesoComida()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
@@ -71,10 +73,11 @@ class ComidaActivity : AppCompatActivity() {
         selectedCard?.setCardBackgroundColor(colorNormal)
         card.setCardBackgroundColor(colorSelected)
         selectedCard = card
+        actualizarPesoComida()
     }
 
     fun sumarORestarEdad(operacion: String) {
-        var edad = edadValor.text.toString().toInt()
+        edad = edadValor.text.toString().toInt()
         if (operacion == "suma") {
             edad++
         } else if (operacion == "resta") {
@@ -83,5 +86,48 @@ class ComidaActivity : AppCompatActivity() {
             }
         }
         edadValor.text = edad.toString()
+        actualizarPesoComida()
+    }
+
+    // Función prporcionada por el profesor
+    private fun calcularPesoComida(): Float {
+        var percentAge: Double = 0.0
+        var percentWeight: Double = 0.0
+
+        when (selectedCard?.id) {
+            R.id.perro -> {
+                percentWeight = ((peso!! * 30) + 70).toDouble()
+                percentAge = when {
+                    edad!! <= 1 -> 1.20
+                    edad!! > 8 -> 0.85
+                    else -> 1.0
+                }
+            }
+            R.id.gato -> {
+                percentWeight = ((peso!! * 25) + 50).toDouble()
+                percentAge = when {
+                    edad!! <= 1 -> 1.15
+                    edad!! > 10 -> 0.90
+                    else -> 1.0
+                }
+            }
+            else -> {
+                percentWeight = 0.0
+                percentAge = 1.0
+            }
+        }
+
+        return (percentWeight * percentAge).toFloat()
+    }
+
+    private fun actualizarPesoComida() {
+        var pesoComida = calcularPesoComida()
+        var pesoComidaFinal = if (pesoComida > 0) {
+            String.format("%.2f", pesoComida) + " g"
+        } else {
+            "0 g"
+        }
+        var resultadoPesoComida = findViewById<TextView>(R.id.pesoComida)
+        resultadoPesoComida.text = pesoComidaFinal
     }
 }

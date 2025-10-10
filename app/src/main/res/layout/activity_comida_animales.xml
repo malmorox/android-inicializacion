@@ -116,17 +116,17 @@
                 android:id="@+id/peso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="50 kg"
+                android:text="0 kg"
                 android:textSize="25dp"
                 android:textAlignment="center"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white" />
 
             <SeekBar
                 android:id="@+id/slidePeso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:max="100"
-                android:progress="50"
+                android:max="120"
+                android:progress="0"
                 android:padding="20dp"
                 android:progressTint="@color/comidas_animales_button"
                 android:thumbTint="@color/comidas_animales_button"/>
@@ -240,9 +240,10 @@
                 android:textColor="@color/white"/>
 
             <TextView
+                android:id="@+id/pesoComida"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:text="Hola"
+                android:text="0 g"
                 android:textSize="25dp"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
