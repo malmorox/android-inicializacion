@@ -23,6 +23,7 @@
         <activity
             android:name="app.comida.ComidaActivity"
             android:exported="true">
+
         </activity>
         <activity
             android:name="app.calculator.CalculatorActivity"

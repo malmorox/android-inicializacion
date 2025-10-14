@@ -14,9 +14,64 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="18dp"
-            android:text="ScrollView"
-            android:textSize="18dp" />
+            android:layout_height="wrap_content"
+            android:text="Ejemplos con ScrollView"
+            android:layout_marginBottom="10dp"
+            android:textSize="30dp" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hola"
+                    android:layout_marginRight="5dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hola"
+                    android:layout_marginRight="5dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hola"
+                    android:layout_marginRight="5dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hola"
+                    android:layout_marginRight="5dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hola"
+                    android:layout_marginRight="5dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hola"
+                    android:layout_marginRight="5dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hola" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
 
         <Space
             android:layout_width="0dp"
@@ -25,8 +80,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Un ScrollView es un contenedor que permite desplazar su contenido cuando este
-            es más grande que el espacio disponible en pantalla. Solo puede tener un hijo directo, por lo que si se necesitan múltiples vistas, estas deben estar contenidas dentro de un contenedor como LinearLayout o RelativeLayout."
+            android:text="Un ScrollView es un contenedor que permite desplazar su contenido cuando este es más grande que el espacio disponible en pantalla. Solo puede tener un hijo directo, por lo que si se necesitan múltiples vistas, estas deben estar contenidas dentro de un contenedor como LinearLayout o RelativeLayout."
             android:textSize="16dp" />
     </LinearLayout>
 
