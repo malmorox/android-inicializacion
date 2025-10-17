@@ -12,16 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidInicializacion">
         <activity
-            android:name="app.navbar.navbar"
-            android:exported="false" />
-        <activity
-            android:name="app.scroll.ScrollActivity"
+            android:name="app.navbar.NavbarActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="app.scroll.ScrollActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name="app.comida.ComidaActivity"
