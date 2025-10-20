@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Categorias"
-            android:style="@style/SubtitulosListados" />
+            style="@style/SubtitulosListados" />
         
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/categorias"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="Tareas"
             android:layout_marginTop="16dp"
-            android:style="@style/SubtitulosListados" />
+            style="@style/SubtitulosListados" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tareas"
