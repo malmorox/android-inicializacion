@@ -10,4 +10,9 @@
     <color name="comidas_animales_cardview_selected">#3A94B1</color>
     <color name="comidas_animales_button">#2CB4FF</color>
     <color name="comidas_animales_icon">#B6DAF8</color>
+
+    <!-- Aplicación listados-->
+    <color name="listados_titulo">#4CAF50</color>
+    <color name="listados_categorias">#8BC34A</color>
+    <color name="listado_boton">#FF9800</color>
 </resources>

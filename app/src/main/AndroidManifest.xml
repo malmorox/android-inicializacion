@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidInicializacion">
         <activity
+            android:name="app.listados.ListadosActivity"
+            android:exported="true">
+        </activity>
+        <activity
             android:name="app.navbar.NavbarActivity"
             android:exported="true">
             <intent-filter>
@@ -22,11 +26,10 @@
         </activity>
         <activity
             android:name="app.scroll.ScrollActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name="app.comida.ComidaActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name="app.calculator.CalculatorActivity"
             android:exported="true">
