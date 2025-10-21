@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/campoTarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:hint="Asigna un nombre"
+        android:textColor="@color/black"
+        android:textColorHint="@color/lightgrey"
+        android:singleLine="true"/>
+
+    <RadioGroup
+        android:id="@+id/rgCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioDeportes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/listados_radio_modal"
+            android:checked="true"
+            android:text="Deportes"
+            android:textColor="@color/listados_radio_modal" />
+
+        <RadioButton
+            android:id="@+id/radioTrabajo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/listados_radio_modal"
+            android:text="Trabajo"
+            android:textColor="@color/listados_radio_modal" />
+
+        <RadioButton
+            android:id="@+id/radioHogar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/listados_radio_modal"
+            android:text="Hogar"
+            android:textColor="@color/listados_radio_modal" />
+
+        <RadioButton
+            android:id="@+id/radioOtros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/listados_radio_modal"
+            android:text="Otros"
+            android:textColor="@color/listados_radio_modal" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/botonAgregarTarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar tarea"
+        android:backgroundTint="@color/listado_boton"/>
+
+
+</LinearLayout>

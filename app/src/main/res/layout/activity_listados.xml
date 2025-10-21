@@ -26,7 +26,7 @@
             style="@style/SubtitulosListados" />
         
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/categorias"
+            android:id="@+id/rvCategorias"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"/>
@@ -39,7 +39,7 @@
             style="@style/SubtitulosListados" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/tareas"
+            android:id="@+id/rvTareas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"/>
@@ -47,7 +47,7 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/agregarTarea"
+        android:id="@+id/abrirModalAgregarTarea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
