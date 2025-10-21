@@ -20,7 +20,7 @@ class AdaptadorCategorias(
 
     override fun onBindViewHolder(holder: CategoriaViewHolder, position: Int) {
         val categoria = categorias[position]
-        holder.nombreCategoria.text = categoria.javaClass.simpleName
+        holder.nombreCategoria.text = categoria.toString()
 
         val context = holder.itemView.context
         val colorSeleccionado = ContextCompat.getColor(context, R.color.listado_boton)

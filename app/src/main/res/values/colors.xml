@@ -17,4 +17,5 @@
     <color name="listados_categorias">#8BC34A</color>
     <color name="listado_boton">#FF9800</color>
     <color name="listados_radio_modal">#38A965</color>
+    <color name="listados_fondo_tarea">#303030</color>
 </resources>
