@@ -1,6 +1,6 @@
 package app.listados
 
-sealed class TareaCategoria {
+sealed class TareaCategoria(var isSelected:Boolean = true) {
     object Deportes: TareaCategoria()
     object Trabajo: TareaCategoria()
     object Hogar: TareaCategoria()

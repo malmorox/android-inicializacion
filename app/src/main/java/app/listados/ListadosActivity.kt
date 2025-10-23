@@ -41,8 +41,8 @@ class ListadosActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_listados)
         inicializarComponentes()
-        inicializarListeners()
         inicializarUI()
+        inicializarListeners()
     }
 
     private fun inicializarComponentes() {
@@ -58,12 +58,23 @@ class ListadosActivity : AppCompatActivity() {
     }
 
     private fun inicializarUI() {
-        adaptadorCategorias = AdaptadorCategorias(categorias) { categoria ->
-
+        adaptadorCategorias = AdaptadorCategorias(categorias) {
         }
 
         recyclerCategorias.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerCategorias.adapter = adaptadorCategorias
+
+        adaptadorTareas = AdaptadorTareas(tareas) {
+        }
+
+        recyclerTareas.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        recyclerTareas.adapter = adaptadorTareas
+    }
+
+    private fun actualizarCategorias() {
+    }
+
+    private fun actualizarTareas() {
     }
 
     private fun mostrarModal(){
