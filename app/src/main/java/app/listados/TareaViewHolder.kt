@@ -25,17 +25,8 @@ class TareaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         nombreTarea.text = tarea.nombre
         checkboxTarea.isChecked = tarea.isSelected
 
-        val color = when (tarea.categoria) {
-            TareaCategoria.Deportes -> R.color.listados_categoria_deportes
-            TareaCategoria.Hogar -> R.color.listados_categoria_hogar
-            TareaCategoria.Trabajo -> R.color.listados_categoria_trabajo
-            TareaCategoria.Otros -> R.color.listados_categoria_otros
-        }
+        val color = tarea.categoria.obtenerColor(checkboxTarea.context)
 
-        checkboxTarea.buttonTintList = ColorStateList.valueOf(
-            ContextCompat.getColor(checkboxTarea.context, color)
-        )
-
-
+        checkboxTarea.buttonTintList = ColorStateList.valueOf(color)
     }
 }

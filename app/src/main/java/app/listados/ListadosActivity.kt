@@ -25,7 +25,7 @@ class ListadosActivity : AppCompatActivity() {
     private val tareas = mutableListOf(
         Tarea("PruebaDeportes", TareaCategoria.Deportes),
         Tarea("PruebaHogar", TareaCategoria.Hogar),
-        Tarea("PruebaOtros", TareaCategoria.Otros)
+        Tarea("PruebaTrabajo", TareaCategoria.Trabajo)
     )
 
     private lateinit var recyclerCategorias: RecyclerView
@@ -59,23 +59,38 @@ class ListadosActivity : AppCompatActivity() {
 
     private fun inicializarUI() {
         adaptadorCategorias = AdaptadorCategorias(categorias) {
+            posicion -> actualizarCategorias(posicion)
         }
 
         recyclerCategorias.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerCategorias.adapter = adaptadorCategorias
 
         adaptadorTareas = AdaptadorTareas(tareas) {
+            posicion -> onItemSelected(posicion)
         }
 
         recyclerTareas.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerTareas.adapter = adaptadorTareas
     }
 
-    private fun actualizarCategorias() {
+    private fun actualizarCategorias(posicion: Int){
+        categorias[posicion].isSelected = !categorias[posicion].isSelected
+        adaptadorCategorias.notifyItemChanged(posicion)
+        actualizarTareas()
     }
 
-    private fun actualizarTareas() {
+    private fun actualizarTareas(){
+        val selectedCategories: List<TareaCategoria> = categorias.filter { it.isSelected }
+        val nuevasTareas = tareas.filter { selectedCategories.contains(it.categoria) }
+        adaptadorTareas.tareas = nuevasTareas
+        adaptadorTareas.notifyDataSetChanged()
     }
+
+    private fun onItemSelected(posicion:Int){
+        tareas[posicion].isSelected = !tareas[posicion].isSelected
+        actualizarTareas()
+    }
+
 
     private fun mostrarModal(){
         val dialog = Dialog(this)
@@ -98,7 +113,8 @@ class ListadosActivity : AppCompatActivity() {
                 }
 
                 tareas.add(Tarea(currentTask, currentCategory))
-                Log.d("tareas", tareas.toString())
+                actualizarTareas()
+                //Log.d("tareas", tareas.toString())
                 dialog.hide()
             }
         }

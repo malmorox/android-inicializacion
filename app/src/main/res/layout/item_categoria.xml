@@ -4,9 +4,11 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    android:id="@+id/contenedorCategoria"
     app:cardCornerRadius="16dp"
     app:cardElevation="4dp"
     app:strokeWidth="2dp"
+    app:cardBackgroundColor="@color/listados_categoria_contenedor"
     app:strokeColor="@color/listado_boton"
     android:clickable="true"
     android:focusable="true">
