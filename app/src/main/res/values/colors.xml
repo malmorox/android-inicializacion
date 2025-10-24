@@ -17,7 +17,8 @@
     <color name="listados_categorias">#8BC34A</color>
     <color name="listado_boton">#FF9800</color>
     <color name="listados_radio_modal">#38A965</color>
-    <color name="listados_fondo_tarea">#303030</color>
+    <color name="listados_texto_tarea">#454545</color>
+    <color name="listados_fondo_tarea">#EFEFEF</color>
     <color name="listados_categoria_contenedor">#FFD696</color>
     <color name="listados_categoria_deportes">#FFDC05</color>
     <color name="listados_categoria_hogar">#23C7CC</color>
