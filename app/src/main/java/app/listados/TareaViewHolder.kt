@@ -18,13 +18,6 @@ class TareaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun render(tarea: Tarea) {
         nombreTarea.text = tarea.nombre
-        checkboxTarea.isChecked = tarea.isSelected
-
-        if (tarea.isSelected) {
-            nombreTarea.paintFlags = nombreTarea.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
-        } else {
-            nombreTarea.paintFlags = nombreTarea.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
-        }
 
         val color = tarea.categoria.obtenerColor(checkboxTarea.context)
 
