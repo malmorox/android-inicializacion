@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.core.content.ContextCompat
 import com.example.android_inicializacion.R
 
-class AdaptadorCategorias(private val categories: List<TareaCategoria>, private val onItemSelected:(Int) -> Unit) :
+class AdaptadorCategorias(private val categorias: List<TareaCategoria>, private val onItemSelected:(Int) -> Unit) :
     RecyclerView.Adapter<CategoriaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriaViewHolder {
@@ -15,8 +15,8 @@ class AdaptadorCategorias(private val categories: List<TareaCategoria>, private 
     }
 
     override fun onBindViewHolder(holder: CategoriaViewHolder, position: Int) {
-        holder.render(categories[position], onItemSelected)
+        holder.render(categorias[position], onItemSelected)
     }
 
-    override fun getItemCount() = categories.size
+    override fun getItemCount() = categorias.size
 }
