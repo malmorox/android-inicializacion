@@ -11,16 +11,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="36dp">
+        android:padding="30dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Agenda"
+            android:text="@string/agenda_titulo"
             android:textSize="30dp"
-            android:textColor="@color/agenda_titulo"
-            android:layout_marginBottom="30dp"/>
+            android:textAllCaps="true"
+            android:textColor="@color/agenda_titulo"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvListadoContactos"
@@ -37,6 +41,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="25dp"
         app:srcCompat="@drawable/plus"
+        app:tint="@android:color/white"
         android:backgroundTint="@color/agenda_boton"/>
 
 </FrameLayout>

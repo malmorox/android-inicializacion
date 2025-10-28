@@ -58,8 +58,21 @@ class AgendaActivity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(R.layout.dialogo_contacto)
 
-        //val campoNombre = dialog.findViewById<EditText>(R.id.etNombre)
-        //val campoTelefono = dialog.findViewById<EditText>(R.id.etTelefono)
-        //val botonAgregarContacto = dialog.findViewById<Button>(R.id.btnGuardar)
+        val campoNombre = dialog.findViewById<EditText>(R.id.campoNombre)
+        val campoTelefono = dialog.findViewById<EditText>(R.id.campoTelefono)
+        val botonAgregarContacto = dialog.findViewById<Button>(R.id.botonAgregarContacto)
+
+        botonAgregarContacto.setOnClickListener {
+            val nuevoNombre = campoNombre.text.toString().trim()
+            val nuevoTelefono = campoTelefono.text.toString().toIntOrNull()
+
+            if (nuevoNombre.isNotEmpty() && nuevoTelefono != null) {
+                contactos.add(Contacto(nuevoNombre, nuevoTelefono))
+                adaptadorContactos.notifyItemInserted(contactos.size - 1)
+                dialog.hide()
+            }
+        }
+
+        dialog.show()
     }
 }
