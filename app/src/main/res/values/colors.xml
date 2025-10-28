@@ -26,9 +26,10 @@
     <color name="listados_categoria_otros">#A13FE2</color>
 
     <!-- Aplicación agenda-->
+    <color name="agenda_fondo">#F9F0FF</color>
     <color name="agenda_titulo">#5D0195</color>
     <color name="agenda_boton">#EA41FF</color>
-    <color name="agenda_contacto_fondo">#454545</color>
-    <color name="agenda_contacto_texto">#454545</color>
-    <color name="agenda_contacto_telefono">#454545</color>
+    <color name="agenda_contacto_fondo">#E9BBFF</color>
+    <color name="agenda_contacto_nombre">#52006F</color>
+    <color name="agenda_contacto_telefono">#6B0097</color>
 </resources>

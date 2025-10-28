@@ -58,8 +58,8 @@ class AgendaActivity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(R.layout.dialogo_contacto)
 
-        val campoNombre = dialog.findViewById<EditText>(R.id.etNombre)
-        val campoTelefono = dialog.findViewById<EditText>(R.id.etTelefono)
-        val botonAgregarContacto = dialog.findViewById<Button>(R.id.btnGuardar)
+        //val campoNombre = dialog.findViewById<EditText>(R.id.etNombre)
+        //val campoTelefono = dialog.findViewById<EditText>(R.id.etTelefono)
+        //val botonAgregarContacto = dialog.findViewById<Button>(R.id.btnGuardar)
     }
 }

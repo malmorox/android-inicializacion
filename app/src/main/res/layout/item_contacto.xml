@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     card_view:cardCornerRadius="12dp"
-    card_view:cardElevation="4dp">
+    card_view:cardElevation="4dp"
+    android:backgroundTint="@color/agenda_contacto_fondo">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +20,8 @@
             android:layout_height="wrap_content"
             android:text="Nombre"
             android:textStyle="bold"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/agenda_contacto_nombre" />
 
         <TextView
             android:id="@+id/telefonoContacto"
@@ -27,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text="Teléfono"
             android:textSize="16sp"
-            android:textColor="#555" />
+            android:textColor="@color/agenda_contacto_telefono" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
